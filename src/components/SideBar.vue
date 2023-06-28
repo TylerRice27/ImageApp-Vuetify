@@ -4,7 +4,7 @@
               <v-list-item
                 prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
                 title="Tyler Rice"
-                subtitle="cool.ty@gmailcom"
+                subtitle="cool.ty@gmail.com"
               ></v-list-item>
             </v-list>
 <v-divider></v-divider>
