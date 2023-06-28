@@ -10,10 +10,22 @@
 <v-divider></v-divider>
 
     <v-list density="compact" nav>
-              <v-list-item prepend-icon="mdi-image" title="Color Gallery" value="color"></v-list-item>
-              <v-list-item prepend-icon="mdi-dialpad" title="Grayscale Gallery" value="gray"></v-list-item>
+              <v-list-item prepend-icon="mdi-image" title="Color Gallery" value="color" @click="selectOption(true)"></v-list-item>
+              <v-list-item prepend-icon="mdi-dialpad" title="Grayscale Gallery" value="gray"  @click="selectOption(false)"></v-list-item>
             </v-list>
 
     </v-navigation-drawer>
 </template>
+
+
+<script setup>
+import { defineEmits } from 'vue';
+
+
+const emit = defineEmits(['selectOption']) 
+
+const selectOption = (isColor) => {
+    emit("selectOption", isColor)
+}
+</script>
 
