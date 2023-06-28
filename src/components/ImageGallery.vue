@@ -7,7 +7,7 @@
             close-delay="200"
           >
             <v-card  :elevation="isHovering ? 16 : 2"
-              :class="{ 'on-hover': isHovering }" v-bind:="props">
+              :class="{ 'on-hover': isHovering }" v-bind:="props" @click="copyUrl(`https://picsum.photos/500/300?image=${n * 5 + 10}${colorProp.isWithColor ? '' : '&grayscale'}`)">
              <v-img :src="`https://picsum.photos/500/300?image=${n * 5 + 10}${colorProp.isWithColor ? '' : '&grayscale'}`"
              :lazy-src="`https://picsum.photos/500/6?image=${n * 5 + 10}${colorProp.isWithColor ? '' : '&grayscale'}`"
              aspect-ratio="1" cover>
@@ -36,4 +36,8 @@
 import { defineProps } from 'vue';
 
 const colorProp = defineProps(["isWithColor"])
+
+const copyUrl = async (url) => {
+    await navigator.clipboard.writeText(url)
+}
 </script>
