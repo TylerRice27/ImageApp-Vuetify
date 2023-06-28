@@ -1,6 +1,6 @@
 <template>
     <v-row class="pa-2">
-        <v-col :key="n" v-for="n in 198" cols="2">
+        <v-col :key="n" v-for="n in 198" cols="6" sm="4" md="2">
             <v-card>
              <v-img :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
              :lazy-src="`https://picsum.photos/500/6?image=${n * 5 + 10}`"
